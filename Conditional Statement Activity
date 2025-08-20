@@ -1,0 +1,107 @@
+using System;
+
+namespace ConditionalStatement
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+
+            Console.WriteLine("Practice 01.1: if Statement");
+
+            int EvenNumber = 20;
+            if (EvenNumber % 2 == 0)
+            {
+                Console.WriteLine($"The number is even");
+            }
+
+
+
+
+
+            Console.WriteLine("Practice 01.2: if-else-Statement");
+
+            int PositiveOrNegative = 12;
+            if (PositiveOrNegative > 0)
+            {
+                Console.WriteLine("The number is Positive");
+            }
+            else
+            {
+                Console.WriteLine("The number is Negative");
+            }
+
+
+
+
+
+            Console.WriteLine("Practice 01.3: else if Ladder");
+
+            int income = 1200000;
+            int age = 100;
+
+            if ((age >= 25) && (age <= 35) && (income > 50000))
+            {
+                Console.WriteLine("Young Professional");
+            }
+            else if ((age >= 36) && (age <= 55) && (income > 70000))
+            {
+                Console.WriteLine("Middle-Aged Professional");
+            }
+            else if ((age > 56) && (income < 30000))
+            {
+                Console.WriteLine("Senior Citizen");
+            }
+            else
+            {
+                Console.WriteLine("Other");
+            }
+
+
+
+
+            Console.WriteLine("01.4: Ternary Operator");
+
+            int score = 75;
+
+            string ExamResult = (score >= 50) ? "Congrats, pasado ka!." : "Bawi na lang next life";
+            Console.WriteLine(ExamResult);
+
+
+
+
+
+            Console.WriteLine("01.05: Switch Statement");
+
+            Console.Write("Enter your choice \nA = Area: \nP = Perimeter: \nX = Exit: \n");
+            char letter = Convert.ToChar(Console.ReadLine());
+
+            switch (letter)
+            {
+                case 'A':
+                    Console.Write("Enter the radius of the circle: ");
+                    double RadiusA = Convert.ToDouble(Console.ReadLine());
+                    double CircleArea = Math.PI * RadiusA * RadiusA;
+                    Console.WriteLine($"The area of the circle is {CircleArea}.");
+                    break;
+
+                case 'P':
+                    Console.Write("Enter the radius of the circle: ");
+                    double RadiusP = Convert.ToDouble(Console.ReadLine());
+                    double CirclePerimeter = 2 * Math.PI * RadiusP;
+                    Console.WriteLine($"The perimeter of the circle is {CirclePerimeter}.");
+                    break;
+
+                case 'X':
+                    Console.WriteLine("Exit the Application.");
+                    break;
+
+            }
+
+
+        
+        }
+    }
+}
