@@ -1,0 +1,87 @@
+﻿using System;
+
+namespace W3__Loop_Activity
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 1. Count down from 10 to 1
+
+            for (int i = 10; i >= 1; i--)
+            {
+                Console.WriteLine(i);
+            }
+
+
+
+            // 2. Print Odd Numbers
+
+            for (int i = 1; i < 50; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+
+
+            // 3. Power of a number
+
+            Console.WriteLine("Enter a base number: ");
+            int BaseNumber = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter a an exponent number: ");
+            int ExponentNumber = Convert.ToInt32(Console.ReadLine());
+
+            int answer = 1;
+
+            for (int i = 1; i <= ExponentNumber; i++)
+            {
+                answer = BaseNumber * answer;
+            }
+
+            Console.WriteLine(BaseNumber + " raised to the power of " + ExponentNumber + " is equal to " + answer);
+
+
+
+            // 4. Sum of square
+
+            int sum = 0;
+
+            for (int i = 1; i <= 10; i++)
+            {
+                sum = sum + (i * i);
+            }
+
+            Console.WriteLine(sum);
+
+
+
+            // 5. Sum of odd digits- write a program to calculate the sum of odd digits in a  given number
+
+            Console.WriteLine("Enter a number: ");
+            int OddNumber = Convert.ToInt32(Console.ReadLine());
+
+            int OddSum = 0;
+
+            while (OddNumber > 0)
+            {
+                int Number = OddNumber % 10;
+
+                if (Number % 2 != 0)
+                {
+                    OddSum = OddSum + Number;
+                }
+
+                OddNumber = OddNumber / 10;
+            }
+
+            Console.WriteLine(OddSum);
+
+
+
+        }
+    }
+}
